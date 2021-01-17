@@ -1,0 +1,35 @@
+body {
+
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+#logo {
+    flex-grow: 1;
+}
+
+#heading {
+    font-size: 32px;
+    font-family: 'Montez', cursive;
+    color: blue;
+}
+#subHeading{
+    font-family: Ubuntu Mono;
+}
+
+#home {
+    margin: auto;
+    width: 300px;
+}
+
+.posts {
+    background-color: yellow;
+    color: black;
+}

@@ -1,0 +1,37 @@
+html{
+    height: 100%;
+}
+body {
+    background-color: #ffeedd;
+    height: 100%;
+
+}
+
+.postDashboard {
+    width: 460px;
+    border-radius: 20px;
+    background-color: #ccc;
+    height: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.postName {
+    background-color: white;
+}
+
+.postsContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    height: 500px;
+    flex-wrap: wrap;
+}
+
+.postContent {
+    width: 200px;
+}

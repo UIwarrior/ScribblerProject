@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scribbler</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+    <!-- TODO: Include Font Awesome file here -->
+    <script src="https://use.fontawesome.com/0c4869edc0.js"></script>
+
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="./styles/index.css">
+    <script src="scripts/index.js"></script>
+
+</head>
+
+<body>
+    <!-- TODO: Include all your code for the header and home page here -->
+
+    <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPost" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="postTitle">Title</label>
+                      <input type="text" class="form-control" id="postTitle" placeholder="Enter title of your post">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Contents</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id ="signUpModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Get Started</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputName">Name</label>
+                        <input type="email" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter your name" required>
+                      </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail">Username</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter your username" required> 
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password" required>
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Confirm Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-enter your password" required>
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit">Submit form</button>           
+             </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Welcome Back</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail">Username</label>
+                      <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success btn-lg btn-block" data-dismiss="modal">Sign In</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+
+
+    <div id ="header">
+        <div id="logo">
+            <div id ="heading">Scribbler</div>
+             <div id="subHeading">Explore, Imagine, Create</div>   
+        </div>
+        <div id="buttonGroup">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal">Sign In</button>
+        </div>
+      </div> 
+
+    <div id ="home">
+        <div id = "postsBtnGroup">
+        <button type="button" class="btn btn-primary posts" onClick ="redirectAllPosts()">All Posts</button>
+        <button type="button" class="btn btn-primary posts" data-toggle="modal" data-target="#createPostModal">Create Post</button>
+        </div>
+      </div>  
+
+</body>
+
+</html>
