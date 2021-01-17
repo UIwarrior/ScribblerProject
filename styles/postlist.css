@@ -8,10 +8,10 @@ body {
 }
 
 .postDashboard {
-    width: 500px;
+    width: 550px;
     border-radius: 20px;
     background-color: #eceaea;
-    height: 140px;
+    height: 145px;
     margin: 15px;
     display: flex;
     flex-direction: row;
@@ -27,7 +27,7 @@ body {
     padding-top: 40px;
     background-color: white;
     border-radius: 15px 0px 0px 15px;
-    height: 140px;
+    height: 145px;
 }
 
 .postsContainer {
@@ -43,7 +43,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0px;
-    flex-basis: 385px;
+    flex-basis: 440px;
     padding: 0px 0px 0px 10px;
     display: flex;
     flex-direction: column;
@@ -51,11 +51,13 @@ body {
 
 .postContent div {
     display: flex;
-    height: 25px;
+    min-height: 20px;
 }
 .postContent div > p {
     flex-grow: 1;
     margin: 10px;
+    font-size: 14px;
+    color: #847f7f;
 }
 
 .postContent div > span {
@@ -66,7 +68,7 @@ body {
 
 .postContent p {
     overflow: hidden;
-    width: 340px;
+    width: 400px;
     height: 70px;
     margin: 10px;
 }
