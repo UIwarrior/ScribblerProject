@@ -8,30 +8,71 @@ body {
 }
 
 .postDashboard {
-    width: 460px;
+    width: 500px;
     border-radius: 20px;
-    background-color: #ccc;
-    height: 100px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    background-color: #eceaea;
+    height: 140px;
     margin: 15px;
     display: flex;
     flex-direction: row;
 }
 
 .postName {
+    flex-basis: 80px;
+}
+
+.postName p {
+    margin: 0px;
+    text-align: center;
+    padding-top: 40px;
     background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    height: 140px;
 }
 
 .postsContainer {
     display: flex;
     flex-direction: row;
-    margin: 20px;
-    height: 500px;
+    margin: auto;
+    height: 535px;
     flex-wrap: wrap;
+    width: 1200px;
 }
 
 .postContent {
-    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+    flex-basis: 385px;
+    padding: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postContent div {
+    display: flex;
+    height: 25px;
+}
+.postContent div > p {
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.postContent div > span {
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.postContent p {
+    overflow: hidden;
+    width: 340px;
+    height: 70px;
+    margin: 10px;
+}
+
+.postContent span {
+    text-align: right;
+    font-size: 14px;
+
 }
