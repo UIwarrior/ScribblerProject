@@ -8,7 +8,7 @@ body {
 #header{
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 10px;
 }
 
 #logo {
@@ -27,9 +27,29 @@ body {
 #home {
     margin: auto;
     width: 300px;
+    margin-top: 400px;
 }
 
 .posts {
     background-color: yellow;
     color: black;
+}
+
+.signUpInSignInModal{
+    text-align: center;
+    margin: auto;
+}
+
+.signUpInSignInModal span{
+    color: blue;
+    cursor: pointer;
+}
+
+.homepageBtn {
+    background-color: blue;
+    color: white;
+}
+
+.postsBtn {
+    background-color: #eccb69
 }
