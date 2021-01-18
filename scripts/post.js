@@ -45,7 +45,6 @@ function postComment(){
         return;
     }
     commentArray.unshift(document.getElementById("commentBox").value);
-    console.log("comment Array", commentArray);
     document.getElementById("comments").innerHTML = '';
     commentArray.forEach(function(val, index) {
         document.getElementById("comments").innerHTML += '<p>'+val+'</p>';
