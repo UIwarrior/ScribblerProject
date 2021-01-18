@@ -8,7 +8,7 @@ body {
 #header{
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 10px;
 }
 
 #logo {
@@ -37,10 +37,12 @@ body {
 
 .signUpInSignInModal{
     text-align: center;
+    margin: auto;
 }
 
 .signUpInSignInModal span{
     color: blue;
+    cursor: pointer;
 }
 
 .homepageBtn {
