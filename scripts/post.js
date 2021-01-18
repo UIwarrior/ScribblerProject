@@ -44,10 +44,11 @@ function postComment(){
         alert("Please enter any comment");
         return;
     }
-    commentArray = [];
-    commentArray.push(document.getElementById("commentBox").value);
+    commentArray.unshift(document.getElementById("commentBox").value);
+    console.log("comment Array", commentArray);
+    document.getElementById("comments").innerHTML = '';
     commentArray.forEach(function(val, index) {
-        document.getElementById("comments").innerHTML+= '<p>'+val+'</p>';
+        document.getElementById("comments").innerHTML += '<p>'+val+'</p>';
     });
     document.getElementById("commentBox").value = '';
     document.getElementById("allComments").style.display = 'block';
