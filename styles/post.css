@@ -37,6 +37,7 @@ body {
 #comments p {
     background: white;
     padding: 10px;
+    margin-bottom: 5px;
 }
 
 #likes {
@@ -57,11 +58,11 @@ margin-bottom: 10px;
 
 #titleEditableInput {
     margin: 10px 0px 10px 0px;
-    border: 1px solid red;
+    border: 1px solid pink;
 }
 
 #contentEditableTextArea {
-    border: 1px solid red;
+    border: 1px solid pink;
     margin-bottom: 10px;
     min-height: 220px;
 }
