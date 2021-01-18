@@ -27,6 +27,7 @@ body {
 #home {
     margin: auto;
     width: 300px;
+    margin-top: 400px;
 }
 
 .posts {
@@ -40,4 +41,13 @@ body {
 
 .signUpInSignInModal span{
     color: blue;
+}
+
+.homepageBtn {
+    background-color: blue;
+    color: white;
+}
+
+.postsBtn {
+    background-color: #eccb69
 }
