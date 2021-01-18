@@ -11,5 +11,5 @@ function openDeleteModal(_id)
 }
 
 function openPostDetail(){
-    window.open("html/post.html",'_self')
+    window.open("post.html",'_self')
 }

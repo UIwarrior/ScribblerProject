@@ -1,0 +1,50 @@
+.postDetails{
+    margin: auto;
+    width: 1000px;
+}
+
+.postHeading {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#authorEditSection {
+    display: flex;
+    flex-direction: row;
+}
+
+#author {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.editMode {
+    display: none;
+}
+
+#comments {
+    background: #ccc;
+    padding: 10px;
+}
+
+#comments p {
+    background: white;
+    padding: 10px;
+}
+
+#likes {
+    display: none;
+}
+
+#likesCount {
+    padding-right: 5px;
+}
+
+.likeBtn{
+margin-bottom: 10px;
+}
+
+#commentSection .btn {
+    margin: 10px 0px 10px 0px;
+}
