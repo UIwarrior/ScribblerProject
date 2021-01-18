@@ -27,9 +27,27 @@ body {
 #home {
     margin: auto;
     width: 300px;
+    margin-top: 400px;
 }
 
 .posts {
     background-color: yellow;
     color: black;
+}
+
+.signUpInSignInModal{
+    text-align: center;
+}
+
+.signUpInSignInModal span{
+    color: blue;
+}
+
+.homepageBtn {
+    background-color: blue;
+    color: white;
+}
+
+.postsBtn {
+    background-color: #eccb69
 }
