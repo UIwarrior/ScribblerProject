@@ -7,6 +7,7 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    margin-top: 10px;
 }
 
 #authorEditSection {
@@ -58,4 +59,8 @@ margin-bottom: 10px;
     border: 1px solid red;
     margin-bottom: 10px;
     min-height: 220px;
+}
+
+#allComments {
+    display: none;
 }

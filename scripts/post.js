@@ -1,3 +1,10 @@
+var likes = 0;
+var commentArray = [];
+
+
+/**
+ * THis method is invoked when edit button is clicked
+ */
 function triggerEditMode(){
 
     document.getElementById("contentEditableTextArea").value = document.getElementById("contentText").innerHTML;
@@ -11,7 +18,10 @@ function triggerEditMode(){
     }
 }
 
-var likes = 0;
+/**
+ * This method is invoked when user clicks on like button;
+ */
+
 function likePost(){
  likes++;
  document.getElementById("noLikes").style.display = 'none';
@@ -21,15 +31,20 @@ function likePost(){
 }
 
 
-var commentArray = [];
 
 function postComment(){
+
+    if(document.getElementById("commentBox").value === ''){
+        alert("Please enter any comment");
+        return;
+    }
     commentArray = [];
-    commentArray.push(document.getElementById("commentBox").value );
+    commentArray.push(document.getElementById("commentBox").value);
     commentArray.forEach(function(val, index) {
         document.getElementById("comments").innerHTML+= '<p>'+val+'</p>';
     });
     document.getElementById("commentBox").value = '';
+    document.getElementById("allComments").style.display = 'block';
 }
 
 
