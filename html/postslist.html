@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
     <!-- TODO: Include Font Awesome file here -->
+    <link rel ="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/postlist.css">
     <!-- TODO: Include Font Awesome file here -->
     <script src="https://use.fontawesome.com/0c4869edc0.js"></script>
 
+    <script src = '../scripts/index.js'></script>
     <script src ="../scripts/postlist.js"></script>
     <!-- TODO: Include Google Fonts file here -->
 
@@ -20,6 +22,122 @@
     <!-- TODO: Include code for header here -->
 
     
+
+    <div class="commonHeader">
+
+        <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPost" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="postTitle">Title</label>
+                          <input type="text" class="form-control" id="postTitle" placeholder="Enter title of your post">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Contents</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter the contents of your post"></textarea>
+                        </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-dismiss="modal">Create</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+    
+        <div class="modal fade" tabindex="-1" role="dialog" id ="signUpModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Get Started</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputName">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name" required>
+                          </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Username</label>
+                            <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter your username" required> 
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password" required>
+                          </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Confirm Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-enter your password" required>
+                        </div>
+                        <button class="btn btn-success btn-lg btn-block" type="submit">Sign Up</button>           
+    
+                      </form>
+                </div>
+                <div class="modal-footer">
+                 </div>
+              </div>
+            </div>
+          </div>
+          
+    
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Welcome Back</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputUsername">Username</label>
+                          <input type="text" class="form-control" id="exampleInputUsername" placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block">Sign In</button>
+    
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <p class="signUpInSignInModal">Not a member. <span  onclick="closeSignInOpenSignUp()">Sign Up?</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        
+    
+    
+        <div id ="header">
+            <div id="logo">
+                <div id ="heading">Scribbler</div>
+                 <div id="subHeading">Explore, Imagine, Create</div>   
+            </div>
+            <div id="buttonGroup">
+                <button type="button" class="homepageBtn" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+                <button type="button" class="homepageBtn" data-toggle="modal" data-target="#signInModal">Sign In</button>
+            </div>
+          </div> 
+    
+          </div>
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
 
 
@@ -56,7 +174,7 @@
                 <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" onclick="openPostDetail()"></i>
 
                 </span>
             </div>
@@ -80,7 +198,7 @@
                 <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" onclick="openPostDetail()"></i>
 
                 </span>
             </div>
@@ -104,7 +222,7 @@
                 <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" onclick="openPostDetail()"></i>
 
                 </span>
             </div>
@@ -129,7 +247,7 @@
                     leads to confusion when discussing the code.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" onclick="openPostDetail()"></i>
 
                 </span>
             </div>
@@ -154,7 +272,7 @@
                     named xyz.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" onclick="openPostDetail()"></i>
 
                 </span>
             </div>

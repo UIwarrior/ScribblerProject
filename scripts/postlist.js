@@ -1,6 +1,6 @@
 var deleteModalId = null;
 function deletePost(){
-   document.getElementById(deleteModalId).style.display = 'none';
+   document.getElementById(deleteModalId).remove();
    $("#deleteConfirmationModal").modal("hide");
 }
 
@@ -11,5 +11,5 @@ function openDeleteModal(_id)
 }
 
 function openPostDetail(){
-    window.open("html/post.html",'_self')
+    window.open("post.html",'_self')
 }
