@@ -48,3 +48,14 @@ margin-bottom: 10px;
 #commentSection .btn {
     margin: 10px 0px 10px 0px;
 }
+
+#titleEditableInput {
+    margin: 10px 0px 10px 0px;
+    border: 1px solid red;
+}
+
+#contentEditableTextArea {
+    border: 1px solid red;
+    margin-bottom: 10px;
+    min-height: 220px;
+}

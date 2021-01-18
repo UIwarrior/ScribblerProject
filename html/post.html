@@ -23,7 +23,7 @@
    <div class ="postDetails">
         <div class="postHeading">                    
          <p class="readMode" id ="postTitle">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
-         <input value ="let’ me be a ‘const’(ant), not a ‘var’(iable)!" class="form-control editMode" type="text"  id="postTitleInput">
+         <input class="form-control editMode" type="text"  id="titleEditableInput">
 
         </div>
         <div id ="authorEditSection">
@@ -31,14 +31,14 @@
                 <p>Srishti Gupta</p>
              </div>   
              <div id ="edit">
-                <button id ="editBtn" type="button" class="btn btn-danger" onClick="triggerEditMode()">Edit <i class="fa fa-edit"></i></button>
-                <button id="saveBtn" class="editMode" type="button" class="btn btn-danger">Save <i class="fa fa-edit"></i></button>
+                <button id ="editBtn" type="button" class="btn btn-danger readMode" onClick="triggerEditMode()">Edit <i class="fa fa-edit"></i></button>
+                <button id="saveBtn" class="editMode btn btn-danger" type="button" onclick="savePost()">Save <i class="fa fa-edit"></i></button>
 
              </div>   
         </div>
         <div id ="postContent">
-            <p class="readMode">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
-            <textarea class="editMode" class="form-control" id="exampleFormControlTextarea1" rows="3" value = "Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different"></textarea>
+            <p class="readMode" id ="contentText">Just like let, const declarations are hoisted to the top but are not initialized.So just in case you missed the differences, here they are:var declarations are globally scoped or function scoped while let and const are block scoped. var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.While var and let can be declared without being initialized, const must be initialized during declaration.</p>
+            <textarea class="editMode form-control" id="contentEditableTextArea" rows="3" ></textarea>
 
          </div>
          <div id ="likeSection">

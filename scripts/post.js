@@ -1,4 +1,7 @@
 function triggerEditMode(){
+
+    document.getElementById("contentEditableTextArea").value = document.getElementById("contentText").innerHTML;
+    document.getElementById("titleEditableInput").value = document.getElementById("postTitle").innerHTML;
     var editArray = document.getElementsByClassName('editMode');
     for(var i = 0; i< editArray.length; i++){
         editArray[i].style.display = 'block';
@@ -6,7 +9,6 @@ function triggerEditMode(){
     for(var j = 0; j < document.getElementsByClassName("readMode").length; j++){
         document.getElementsByClassName("readMode")[j].style.display = 'none';
     }
-    //document.getElementsByClassName()
 }
 
 var likes = 0;
@@ -15,7 +17,7 @@ function likePost(){
  document.getElementById("noLikes").style.display = 'none';
  document.getElementById("likes").style.display = 'block';
  document.getElementById('likesCount').innerHTML = likes;
- document.getElementById("likeText").innerHTML = 'Liked'
+ document.getElementById("likeText").innerHTML = 'Liked';
 }
 
 
@@ -28,4 +30,18 @@ function postComment(){
         document.getElementById("comments").innerHTML+= '<p>'+val+'</p>';
     });
     document.getElementById("commentBox").value = '';
+}
+
+
+function savePost(){
+    document.getElementById("contentText").innerHTML =   document.getElementById("contentEditableTextArea").value;
+    document.getElementById("postTitle").innerHTML = document.getElementById("titleEditableInput").value;
+
+    var editArray = document.getElementsByClassName('editMode');
+    for(var i = 0; i< editArray.length; i++){
+        editArray[i].style.display = 'none';
+    }
+    for(var j = 0; j < document.getElementsByClassName("readMode").length; j++){
+        document.getElementsByClassName("readMode")[j].style.display = 'block';
+    }
 }
