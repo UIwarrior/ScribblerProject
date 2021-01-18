@@ -2,36 +2,94 @@ html{
     height: 100%;
 }
 body {
+    background-image: none;
     background-color: #ffeedd;
     height: 100%;
 
 }
 
 .postDashboard {
-    width: 460px;
+    width: 550px;
     border-radius: 20px;
-    background-color: #ccc;
-    height: 100px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    background-color: #eceaea;
+    height: 145px;
     margin: 15px;
     display: flex;
     flex-direction: row;
 }
 
+.postDashboard:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .postName {
+    flex-basis: 80px;
+}
+
+.postName p {
+    margin: 0px;
+    text-align: center;
+    padding-top: 40px;
     background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    height: 145px;
 }
 
 .postsContainer {
     display: flex;
     flex-direction: row;
-    margin: 20px;
-    height: 500px;
+    margin: auto;
+    height: 535px;
     flex-wrap: wrap;
+    width: 1200px;
 }
 
 .postContent {
-    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+    flex-basis: 440px;
+    padding: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postContent div {
+    display: flex;
+}
+.postContent div > p {
+    flex-grow: 1;
+    margin: 5px;
+    font-size: 14px;
+    color: #847f7f;
+}
+
+.postContent div > span {
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.postContent p {
+    overflow: hidden;
+    width: 400px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.postContent span {
+    text-align: right;
+    font-size: 14px;
+}
+#deleteConfirmationModal .modal-body .btn-danger {
+    float: right;
+}
+
+#deleteConfirmationModal .modal-dialog {
+    top: 200px;
+}
+
+#deleteConfirmationModal .modal-content {
+    width: 400px;
 }
