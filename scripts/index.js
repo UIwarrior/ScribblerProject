@@ -3,5 +3,6 @@ function redirectAllPosts (){
 }
 
 function closeSignInOpenSignUp(){
-    
+    $("#signInModal").modal("hide");
+    $("#signUpModal").modal("show");
 }

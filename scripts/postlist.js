@@ -1,6 +1,6 @@
 var deleteModalId = null;
 function deletePost(){
-   document.getElementById(deleteModalId).style.display = 'none';
+   document.getElementById(deleteModalId).remove();
    $("#deleteConfirmationModal").modal("hide");
 }
 
